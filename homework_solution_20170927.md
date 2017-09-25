@@ -2,7 +2,10 @@
 
 #### Look at the head and the tail of chipotle.tsv in the data subdirectory of this repo. Think for a minute about how the data is structured. What do you think each column means? What do you think each row means? Tell me! (If you're unsure, look at more of the file contents.)
 1. *How many orders do there appear to be?*  
-    Using tail chipotle.tsv command, the last order id appears to be 1832. (note: this assumes the IDs are in order)
+    Using tail chipotle.tsv command, the last order id appears to be 1832. 
+    **Note**: this assumes the IDs are in order. If they were not in order, I found this code for an answer:  
+    $ sort -nrk1,1 chipotle.tsv | head -1 (answer: 1834    1       Chicken Salad Bowl      [Fresh Tomato Salsa, [Fajita Vegetables, Pinto Beans, Lettuce]] $8.75)
+     [Link to resource](https://unix.stackexchange.com/questions/170204/find-the-max-value-of-column-1-and-print-respective-record-from-column-2-from-fi)
     
 2. *How many lines are in this file?*  
     Using the wc -l chipotle.tsv command, there are a total of 55837 lines in this file.
@@ -21,10 +24,11 @@
     B. grep -i -E "chicken burrito" chipotle.tsv | grep -i -E "pinto beans" | wc -l (answer: 105)
     I found that Chicken Burrito orders are more often made with black beans.  
     **NOTE**: Same as above, I did not take [quantity] column into consideration. So I verifed based on orders, not items ordered.
+    [Link to resource](http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/)
 
 
-5. *Make a list of all of the CSV or TSV files in the [our class repo] (https://github.com/ga-students/DS-SEA-07). repo (using a single command). You will be working on your local repo on your laptop. Think about how wildcard characters can help you with this task.*
-
+5. *Make a list of all of the CSV or TSV files in the [our class repo] (https://github.com/ga-students/DS-SEA-07). repo (using a single command). You will be working on your local repo on your laptop. Think about how wildcard characters can help you with this task.*  
+    Using this command:
 
 
 
