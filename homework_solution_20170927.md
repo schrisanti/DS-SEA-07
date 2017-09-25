@@ -2,7 +2,7 @@
 
 #### Look at the head and the tail of chipotle.tsv in the data subdirectory of this repo. Think for a minute about how the data is structured. What do you think each column means? What do you think each row means? Tell me! (If you're unsure, look at more of the file contents.)  
 
-> The Order ID represents the entire order, each line represents a specific combination of burrito/bowl being ordered, and the quantity represents the number of items of a specific combination. So if you had three lines with the same Order ID, two lines had a Quantity of 1 and the third line had a Quantity of 2, then the order had a total of 4 items with three different combinations. The choice_description details the (free) ingredients being added to the burrito/bowl. The item_price represents the cost of the line item; if the Quantity = 2 then the item_price represents the cost of two items.  
+> The Order ID represents the entire order, the item_name is the item as it appears on the menu, and the choice_description details the (free) ingredients added to the burrito/bowl. Each line represents a specific combination of burrito/bowl + additional ingredients being ordered, and the quantity represents the number of items of a specific combination. So if you had three lines with the same Order ID, two lines had a Quantity of 1 and the third line had a Quantity of 2, then the order had a total of 4 items with three different combinations. The item_price represents the cost of the line item; if the Quantity = 2 then the item_price represents the cost of two items.  
 
 
 1. *How many orders do there appear to be?*  
