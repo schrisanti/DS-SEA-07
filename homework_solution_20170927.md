@@ -6,7 +6,7 @@
 
 
 1. *How many orders do there appear to be?*  
-    Using $ tail chipotle.tsv command, the last order id appears to be 1834. 
+    Using $ tail chipotle.tsv command, the last order id appears to be 1834.  
     **Note**: using this command assumes the IDs are in order. If they were not in order, I found this code for an answer:  
     $ sort -nrk1,1 chipotle.tsv | head -1 (answer: 1834    1       Chicken Salad Bowl      [Fresh Tomato Salsa, [Fajita Vegetables, Pinto Beans, Lettuce]] $8.75)
      [Link to resource](https://unix.stackexchange.com/questions/170204/find-the-max-value-of-column-1-and-print-respective-record-from-column-2-from-fi)
