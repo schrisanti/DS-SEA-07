@@ -1,27 +1,31 @@
 # Homework Assignment Due 9/27/2017
 
-#### Look at the head and the tail of chipotle.tsv in the data subdirectory of this repo. Think for a minute about how the data is structured. What do you think each column means? What do you think each row means? Tell me! (If you're unsure, look at more of the file contents.)
+#### Look at the head and the tail of chipotle.tsv in the data subdirectory of this repo. Think for a minute about how the data is structured. What do you think each column means? What do you think each row means? Tell me! (If you're unsure, look at more of the file contents.)  
+
+> The Order ID represents the entire order, each line represents a specific combination of burrito/bowl being ordered, and the quantity represents the number of items of a specific combination. So if you had three lines with the same Order ID, two lines had a Quantity of 1 and the third line had a Quantity of 2, then the order had a total of 4 items with three different combinations. The choice_description details the (free) ingredients being added to the burrito/bowl. The item_price represents the cost of the line item; if the Quantity = 2 then the item_price represents the cost of two items.  
+
+
 1. *How many orders do there appear to be?*  
-    Using tail chipotle.tsv command, the last order id appears to be 1832. 
-    **Note**: this assumes the IDs are in order. If they were not in order, I found this code for an answer:  
+    Using $ tail chipotle.tsv command, the last order id appears to be 1834. 
+    **Note**: using this command assumes the IDs are in order. If they were not in order, I found this code for an answer:  
     $ sort -nrk1,1 chipotle.tsv | head -1 (answer: 1834    1       Chicken Salad Bowl      [Fresh Tomato Salsa, [Fajita Vegetables, Pinto Beans, Lettuce]] $8.75)
      [Link to resource](https://unix.stackexchange.com/questions/170204/find-the-max-value-of-column-1-and-print-respective-record-from-column-2-from-fi)
     
 2. *How many lines are in this file?*  
-    Using the wc -l chipotle.tsv command, there are a total of 55837 lines in this file.
+    Using the $ wc -l chipotle.tsv command, there are a total of 4623 lines in this file.
 
 3. *Which burrito is more popular, steak or chicken?*  
     Using the following commands:  
-    A. grep -i "steak burrito" chipotle.tsv | wc -l   (answer: 368)  
-    B. grep -i "chicken burrito" chipotle.tsv | wc -l (answer: 553)  
+    A. $ grep -i "steak burrito" chipotle.tsv | wc -l   (answer: 368)  
+    B. $ grep -i "chicken burrito" chipotle.tsv | wc -l (answer: 553)  
     I found that there are more orders for Chicken Burritos.   
     **NOTE**: I did not take into account order [quantity] column, so the total number of chicken burritos ordered may be fewer than total steak burritos ordered.
   [Link to resource](https://unix.stackexchange.com/questions/291225/count-the-number-of-lines-found-by-grep)
 
 4. *Do chicken burritos more often have black beans or pinto beans?*  
     Using the following commands:  
-    A.  grep -i -E "chicken burrito" chipotle.tsv | grep -i -E "black beans" | wc -l (answer: 282)
-    B. grep -i -E "chicken burrito" chipotle.tsv | grep -i -E "pinto beans" | wc -l (answer: 105)
+    A.  $ grep -i -E "chicken burrito" chipotle.tsv | grep -i -E "black beans" | wc -l (answer: 282)
+    B. $ grep -i -E "chicken burrito" chipotle.tsv | grep -i -E "pinto beans" | wc -l (answer: 105)
     I found that Chicken Burrito orders are more often made with black beans.  
     **NOTE**: Same as above, I did not take [quantity] column into consideration. So I verifed based on orders, not items ordered.
     [Link to resource](http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/)
