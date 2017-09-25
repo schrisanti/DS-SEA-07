@@ -1,6 +1,6 @@
-#Homework Assignment Due 9/27/2017
+# Homework Assignment Due 9/27/2017
 
-####Look at the head and the tail of chipotle.tsv in the data subdirectory of this repo. Think for a minute about how the data is structured. What do you think each column means? What do you think each row means? Tell me! (If you're unsure, look at more of the file contents.)
+#### Look at the head and the tail of chipotle.tsv in the data subdirectory of this repo. Think for a minute about how the data is structured. What do you think each column means? What do you think each row means? Tell me! (If you're unsure, look at more of the file contents.)
 1. *How many orders do there appear to be?*
     
 2. *How many lines are in this file?*
