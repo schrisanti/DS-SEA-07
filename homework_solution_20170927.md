@@ -1,13 +1,22 @@
 # Homework Assignment Due 9/27/2017
 
 #### Look at the head and the tail of chipotle.tsv in the data subdirectory of this repo. Think for a minute about how the data is structured. What do you think each column means? What do you think each row means? Tell me! (If you're unsure, look at more of the file contents.)
-1. *How many orders do there appear to be?*
+1. *How many orders do there appear to be?*  
+    Using tail chipotle.tsv command, the last order id appears to be 1832. (note: this assumes the IDs are in order)
     
-2. *How many lines are in this file?*
+2. *How many lines are in this file?*  
+    Using the wc -l chipotle.tsv command, there are a total of 55837 lines in this file.
 
-3. *Which burrito is more popular, steak or chicken?*
+3. *Which burrito is more popular, steak or chicken?*  
+    Using the following commands:  
+    A. grep -i "steak burrito" chipotle.tsv | wc -l   (answer: 368)  
+    B. grep -i "chicken burrito" chipotle.tsv | wc -l (answer: 553)  
+    I found that Chicken Burritos are more popular.  
+  [Link to resource](https://unix.stackexchange.com/questions/291225/count-the-number-of-lines-found-by-grep)
 
 4. *Do chicken burritos more often have black beans or pinto beans?*
+    
+
 
 5. *Make a list of all of the CSV or TSV files in the [our class repo] (https://github.com/ga-students/DS-SEA-07). repo (using a single command). You will be working on your local repo on your laptop. Think about how wildcard characters can help you with this task.*
 
