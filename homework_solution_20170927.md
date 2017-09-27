@@ -75,8 +75,62 @@
      )
 
 6. *Count the approximate number of occurrences of the word "dictionary" (regardless of case) across all files of [our class repo] (https://github.com/ga-students/DS-SEA-7).*  
-       I used this command $ find . -iname <asterisk>dictionary<asterisk> but it came back with zero results. I searched Win Explorer and came back with the same results (although six files contain the word dictionary within the file itself. I'd assume command line doesn't index the  files to do this...?) 
-
+       I used this command $ find . -iname <asterisk>dictionary<asterisk> but it came back with zero results. I also used the command $ grep -r "directory" . | wc -w (answer: 951)
 
 
 **Optional**: *Use the the command line to discover something "interesting" about the Chipotle data. Try using the commands from the "advanced" section!*
+
+I used the command $ tail -n+2 chipotle.tsv | cut -f3,3 | sort | uniq -c to get a list of unique item names and the count of orders:
+    (answers:
+         54 6 Pack Soft Drink
+     66 Barbacoa Bowl
+     91 Barbacoa Burrito
+     11 Barbacoa Crispy Tacos
+     10 Barbacoa Salad Bowl
+     25 Barbacoa Soft Tacos
+    162 Bottled Water
+      2 Bowl
+      6 Burrito
+    104 Canned Soda
+    301 Canned Soft Drink
+     68 Carnitas Bowl
+     59 Carnitas Burrito
+      7 Carnitas Crispy Tacos
+      1 Carnitas Salad
+      6 Carnitas Salad Bowl
+     40 Carnitas Soft Tacos
+    726 Chicken Bowl
+    553 Chicken Burrito
+     47 Chicken Crispy Tacos
+      9 Chicken Salad
+    110 Chicken Salad Bowl
+    115 Chicken Soft Tacos
+    211 Chips
+    110 Chips and Fresh Tomato Salsa
+    479 Chips and Guacamole
+      1 Chips and Mild Fresh Tomato Salsa
+     22 Chips and Roasted Chili Corn Salsa
+     18 Chips and Roasted Chili-Corn Salsa
+     43 Chips and Tomatillo Green Chili Salsa
+     48 Chips and Tomatillo Red Chili Salsa
+     31 Chips and Tomatillo-Green Chili Salsa
+     20 Chips and Tomatillo-Red Chili Salsa
+      2 Crispy Tacos
+     20 Izze
+     27 Nantucket Nectar
+      2 Salad
+    101 Side of Chips
+    211 Steak Bowl
+    368 Steak Burrito
+     35 Steak Crispy Tacos
+      4 Steak Salad
+     29 Steak Salad Bowl
+     55 Steak Soft Tacos
+     85 Veggie Bowl
+     95 Veggie Burrito
+      1 Veggie Crispy Tacos
+      6 Veggie Salad
+     18 Veggie Salad Bowl
+      7 Veggie Soft Tacos
+    )
+
