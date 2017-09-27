@@ -42,7 +42,7 @@
     **NOTE 2**: Same as my Note 2 above, I couldn't layer in the WHERE clause to the summed quantity but the same concept would be involved. And again, using other tools I found that 'Chicken Burrito' + 'pinto beans' = 108, and 'Chicken Burrito' + 'pinto beans' = 307, so black beans are still ordered more often.
 
 5. *Make a list of all of the CSV or TSV files in the [our class repo] (https://github.com/ga-students/DS-SEA-07). repo (using a single command). You will be working on your local repo on your laptop. Think about how wildcard characters can help you with this task.*  
-    Using this command: $ find /c/Users/schri/Desktop/DS-SEA-07-master -name *.?sv
+    Using this command: $ find /c/Users/schri/Desktop/DS-SEA-07-master -name <asterisk>.?sv
     (Answer: 
     + /c/Users/schri/Desktop/DS-SEA-07-master/data/airlines.csv
     + /c/Users/schri/Desktop/DS-SEA-07-master/data/Airline_on_time_west_coast.csv
@@ -75,7 +75,7 @@
      )
 
 6. *Count the approximate number of occurrences of the word "dictionary" (regardless of case) across all files of [our class repo] (https://github.com/ga-students/DS-SEA-7).*  
-       I used this command $ find . -iname *dictionary* but it came back with zero results. I searched Win Explorer and came back with the same results (although six files contain the word dictionary within the file itself. I'd assume command line doesn't index the  files to do this...?) 
+       I used this command $ find . -iname <asterisk>dictionary<asterisk> but it came back with zero results. I searched Win Explorer and came back with the same results (although six files contain the word dictionary within the file itself. I'd assume command line doesn't index the  files to do this...?) 
 
 
 
