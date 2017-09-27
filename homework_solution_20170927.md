@@ -74,7 +74,10 @@
     + /c/Users/schri/Desktop/DS-SEA-07-master/data/yelp.csv
      )
 
-6. *Count the approximate number of occurrences of the word "dictionary" (regardless of case) across all files of [our class repo] (https://github.com/ga-students/DS-SEA-7).*
+6. *Count the approximate number of occurrences of the word "dictionary" (regardless of case) across all files of [our class repo] (https://github.com/ga-students/DS-SEA-7).*  
+
+I used this command $ find . -iname *dictionary* but it came back with zero results. I searched Win Explorer and came back with the same results (although six files contain the word dictionary within the file itself. I'd assume command line doesn't index the  files to do this...?) 
+
 
 
 **Optional**: *Use the the command line to discover something "interesting" about the Chipotle data. Try using the commands from the "advanced" section!*
