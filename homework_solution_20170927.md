@@ -21,7 +21,6 @@
     I found that there are more orders for Chicken Burritos.   
     **NOTE**: I did not take into account order [quantity] column, so the total number of chicken burritos ordered may be fewer than total steak burritos ordered.
   [Link to original solution resource](https://unix.stackexchange.com/questions/291225/count-the-number-of-lines-found-by-grep)
-
     **NOTE 2**: Per our conversation I tried to sum the [quantity] column to determine popularity by volume. I could not get it to work.
     I know there's $ awk '{sum+=$2} END {print sum}' chipotle.tsv to sum the [quantity] column (answer = 4972, which is the
     SumOfQuantity). But I can't figure out how to layer on the SQL equivalent of a GROUP BY clause (which would sum by $3 or the
@@ -45,34 +44,34 @@
 5. *Make a list of all of the CSV or TSV files in the [our class repo] (https://github.com/ga-students/DS-SEA-07). repo (using a single command). You will be working on your local repo on your laptop. Think about how wildcard characters can help you with this task.*  
     Using this command: $ find /c/Users/schri/Desktop/DS-SEA-07-master -name *.?sv
     (Answer: 
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/airlines.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/Airline_on_time_west_coast.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/bank-additional.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/bikeshare.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/chipotle.tsv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/citibike_feb2014.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/drinks.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/drones.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/hitters.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/icecream.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/imdb_1000.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/mtcars.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/NBA_players_2015.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/ozone.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/pronto_cycle_share/2015_station_data.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/pronto_cycle_share/2015_trip_data.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/pronto_cycle_share/2015_weather_data.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/rossmann.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/rt_critics.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/sms.tsv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/stores.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/syria.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/time_series_train.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/titanic.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/ufo.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/vehicles_test.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/vehicles_train.csv
-    /c/Users/schri/Desktop/DS-SEA-07-master/data/yelp.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/airlines.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/Airline_on_time_west_coast.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/bank-additional.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/bikeshare.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/chipotle.tsv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/citibike_feb2014.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/drinks.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/drones.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/hitters.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/icecream.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/imdb_1000.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/mtcars.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/NBA_players_2015.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/ozone.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/pronto_cycle_share/2015_station_data.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/pronto_cycle_share/2015_trip_data.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/pronto_cycle_share/2015_weather_data.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/rossmann.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/rt_critics.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/sms.tsv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/stores.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/syria.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/time_series_train.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/titanic.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/ufo.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/vehicles_test.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/vehicles_train.csv
+    +/c/Users/schri/Desktop/DS-SEA-07-master/data/yelp.csv
     )
 
 6. *Count the approximate number of occurrences of the word "dictionary" (regardless of case) across all files of [our class repo] (https://github.com/ga-students/DS-SEA-7).*
