@@ -21,16 +21,10 @@
     I found that there are more orders for Chicken Burritos.   
     **NOTE**: I did not take into account order [quantity] column, so the total number of chicken burritos ordered may be fewer than total steak burritos ordered.
   [Link to original solution resource](https://unix.stackexchange.com/questions/291225/count-the-number-of-lines-found-by-grep)
-    **NOTE 2**: Per our conversation I tried to sum the [quantity] column to determine popularity by volume. I could not get it to work.
-    I know there's $ awk '{sum+=$2} END {print sum}' chipotle.tsv to sum the [quantity] column (answer = 4972, which is the
-    SumOfQuantity). But I can't figure out how to layer on the SQL equivalent of a GROUP BY clause (which would sum by $3 or the
-    [item_name], or what I think is the right path, the SQL equivalent of a WHERE clause to limit to either "Steak Burrito" or "Chicken
-    Burrito". Based on my searhces it doesn't seem like you should mix $ grep and $ awk.... but logically the two would make sense (grep
-    to limit to lines with the [item_name] I want, and awk to sum the [quantity] column). I did try to $ grep -i "steak burrito"
-    chipotle.tsv |  awk '{sum+=$2} END {print sum}' chipotle.tsv but it still comes back with 4972. I could potentially "hack" a
-    solution with $ grep -i "steak burrito" chipotle.tsv > chipotle2.tsv then $ awk '{sum+=$2} END {print sum}' chipotle2.tsv but that
-    seems expensive. That all being said, using other tools I figured out that Chicken Burritos are more popular,  where Chicken Burrito
-    = 591 and Steak Burrito = 386.
+    **NOTE 2**: Per our conversation I tried to sum the [quantity] column to determine popularity by volume. 
+    A. $ grep -i "Steak Burrito" chipotle.tsv | awk '{sum+=$2} END {print sum}' (answer = 386)
+    B. $ grep -i "Chicken Burrito" chipotle.tsv | awk '{sum+=$2} END {print sum}' (answer = 591)
+    I figured out that Chicken Burritos are more popular, where Chicken Burrito = 591 and Steak Burrito = 386.
   
 4. *Do chicken burritos more often have black beans or pinto beans?*  
     Using the following commands:  
@@ -39,7 +33,10 @@
     I found that Chicken Burrito orders are more often made with black beans.  
     **NOTE**: Same as above, I did not take [quantity] column into consideration. So I verifed based on orders, not items ordered.
     [Link to original solution resource](http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/)  
-    **NOTE 2**: Same as my Note 2 above, I couldn't layer in the WHERE clause to the summed quantity but the same concept would be involved. And again, using other tools I found that 'Chicken Burrito' + 'pinto beans' = 108, and 'Chicken Burrito' + 'pinto beans' = 307, so black beans are still ordered more often.
+    **NOTE 2**: 
+    A. $ grep -i -E "chicken burrito" chipotle.tsv | grep -i -E "black beans" | awk '{sum+=$2} END {print sum}' (answer = 307)
+    B. $ grep -i -E "chicken burrito" chipotle.tsv | grep -i -E "pinto beans" | awk '{sum+=$2} END {print sum}' (answer = 108)
+    I found that 'Chicken Burrito' + 'pinto beans' = 108, and 'Chicken Burrito' + 'pinto beans' = 307, so black beans are still ordered     more often.
 
 5. *Make a list of all of the CSV or TSV files in the [our class repo] (https://github.com/ga-students/DS-SEA-07). repo (using a single command). You will be working on your local repo on your laptop. Think about how wildcard characters can help you with this task.*  
     Using this command: $ find /c/Users/schri/Desktop/DS-SEA-07-master -name <asterisk>.?sv
