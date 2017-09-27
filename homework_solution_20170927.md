@@ -30,7 +30,7 @@
     B. $ grep -i -E "chicken burrito" chipotle.tsv | grep -i -E "pinto beans" | wc -l (answer: 105)
     I found that Chicken Burrito orders are more often made with black beans.  
     **NOTE**: Same as above, I did not take [quantity] column into consideration. So I verifed based on orders, not items ordered.
-    [Link to original solution resource](http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/)
+    [Link to original solution resource](http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/)  
     ** NOTE 2** Same as my Note 2 above, I couldn't layer in the WHERE clause to the summed quantity but the same concept would be involved. And again, using other tools I found that 'Chicken Burrito' + 'pinto beans' = 108, and 'Chicken Burrito' + 'pinto beans' = 307, so black beans are still ordered more often.
 
 5. *Make a list of all of the CSV or TSV files in the [our class repo] (https://github.com/ga-students/DS-SEA-07). repo (using a single command). You will be working on your local repo on your laptop. Think about how wildcard characters can help you with this task.*  
