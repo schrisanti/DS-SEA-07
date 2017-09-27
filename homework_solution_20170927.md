@@ -34,10 +34,39 @@
     **NOTE 2**: Same as my Note 2 above, I couldn't layer in the WHERE clause to the summed quantity but the same concept would be involved. And again, using other tools I found that 'Chicken Burrito' + 'pinto beans' = 108, and 'Chicken Burrito' + 'pinto beans' = 307, so black beans are still ordered more often.
 
 5. *Make a list of all of the CSV or TSV files in the [our class repo] (https://github.com/ga-students/DS-SEA-07). repo (using a single command). You will be working on your local repo on your laptop. Think about how wildcard characters can help you with this task.*  
-    Using this command:
-
-
+    Using this command: $ find /c/Users/schri/Desktop/DS-SEA-07-master -name *.?sv
+    (Answer: 
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/airlines.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/Airline_on_time_west_coast.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/bank-additional.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/bikeshare.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/chipotle.tsv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/citibike_feb2014.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/drinks.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/drones.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/hitters.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/icecream.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/imdb_1000.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/mtcars.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/NBA_players_2015.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/ozone.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/pronto_cycle_share/2015_station_data.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/pronto_cycle_share/2015_trip_data.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/pronto_cycle_share/2015_weather_data.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/rossmann.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/rt_critics.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/sms.tsv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/stores.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/syria.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/time_series_train.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/titanic.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/ufo.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/vehicles_test.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/vehicles_train.csv
+    /c/Users/schri/Desktop/DS-SEA-07-master/data/yelp.csv
+    )
 
 6. *Count the approximate number of occurrences of the word "dictionary" (regardless of case) across all files of [our class repo] (https://github.com/ga-students/DS-SEA-7).*
+
 
 **Optional**: *Use the the command line to discover something "interesting" about the Chipotle data. Try using the commands from the "advanced" section!*
