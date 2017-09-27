@@ -21,10 +21,10 @@
     I found that there are more orders for Chicken Burritos.   
     **NOTE**: I did not take into account order [quantity] column, so the total number of chicken burritos ordered may be fewer than total steak burritos ordered.
   [Link to original solution resource](https://unix.stackexchange.com/questions/291225/count-the-number-of-lines-found-by-grep)
-    **NOTE 2**: Per our conversation I tried to sum the [quantity] column to determine popularity by volume. 
-    A. $ grep -i "Steak Burrito" chipotle.tsv | awk '{sum+=$2} END {print sum}' (answer = 386)
-    B. $ grep -i "Chicken Burrito" chipotle.tsv | awk '{sum+=$2} END {print sum}' (answer = 591)
-    I figured out that Chicken Burritos are more popular, where Chicken Burrito = 591 and Steak Burrito = 386.
+    **NOTE 2**: Per our conversation I tried to sum the [quantity] column to determine popularity by volume.  
+    A. $ grep -i "Steak Burrito" chipotle.tsv | awk '{sum+=$2} END {print sum}' (answer = 386)  
+    B. $ grep -i "Chicken Burrito" chipotle.tsv | awk '{sum+=$2} END {print sum}' (answer = 591)  
+    I figured out that Chicken Burritos are more popular, where Chicken Burrito = 591 and Steak Burrito = 386.  
   
 4. *Do chicken burritos more often have black beans or pinto beans?*  
     Using the following commands:  
@@ -33,9 +33,9 @@
     I found that Chicken Burrito orders are more often made with black beans.  
     **NOTE**: Same as above, I did not take [quantity] column into consideration. So I verifed based on orders, not items ordered.
     [Link to original solution resource](http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/)  
-    **NOTE 2**: 
-    A. $ grep -i -E "chicken burrito" chipotle.tsv | grep -i -E "black beans" | awk '{sum+=$2} END {print sum}' (answer = 307)
-    B. $ grep -i -E "chicken burrito" chipotle.tsv | grep -i -E "pinto beans" | awk '{sum+=$2} END {print sum}' (answer = 108)
+    **NOTE 2**:  
+    A. $ grep -i -E "chicken burrito" chipotle.tsv | grep -i -E "black beans" | awk '{sum+=$2} END {print sum}' (answer = 307)  
+    B. $ grep -i -E "chicken burrito" chipotle.tsv | grep -i -E "pinto beans" | awk '{sum+=$2} END {print sum}' (answer = 108)  
     I found that 'Chicken Burrito' + 'pinto beans' = 108, and 'Chicken Burrito' + 'pinto beans' = 307, so black beans are still ordered     more often.
 
 5. *Make a list of all of the CSV or TSV files in the [our class repo] (https://github.com/ga-students/DS-SEA-07). repo (using a single command). You will be working on your local repo on your laptop. Think about how wildcard characters can help you with this task.*  
