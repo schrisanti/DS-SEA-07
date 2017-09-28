@@ -10,8 +10,8 @@ A manager or publicist (to say nothing of the movie studio) has to give their cl
 
 ## DATA SOURCES
 *Primary source* = IMDB/OMDb (what we used in class)  
-	- Complete list of SNL episodes (the episode title contains the Host/Musical Guest)  
-	- Actor's bio  
+	...- Complete list of SNL episodes (the episode title contains the Host/Musical Guest)  
+	...- Actor's bio  
 *Secondary source* = wikipedia for actor biographical information (age, place of birth, marital status, etc)  
 *Potential source* if needed = comScore (fka Rentrack) for movie cost/profit (if needed). Although comScore is usually not free.  
 
